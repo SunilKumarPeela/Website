@@ -73,7 +73,7 @@ const Certifications = () => {
       name: "Cisco Junior Cybersecurity Analyst",
       issuer: "Cisco",
       year: "2024",
-      logo: "/src/assets/cisco-logo.png"
+      logo: "https://images.seeklogo.com/logo-png/3/2/cisco-logo-png_seeklogo-30674.png"
     },
     {
       name: "Palo Alto Networks Security Fundamentals",
