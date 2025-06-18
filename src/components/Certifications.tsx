@@ -79,7 +79,7 @@ const Certifications = () => {
       name: "Palo Alto Networks Security Fundamentals",
       issuer: "Palo Alto Networks",
       year: "2024",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbG0qSOnkWntqk7zXknVCGVC9n18MFOcgfdA&sg"
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbG0qSOnkWntqk7zXknVCGVC9n18MFOcgfdA&s"
     },
     {
       name: "Stellar Certified SOC Analyst",
