@@ -91,7 +91,7 @@ const Certifications = () => {
       name: "Fortinet Network Security Expert Level 1",
       issuer: "Fortinet",
       year: "2024",
-      logo: "https://images.credly.com/images/e4042b4b-7f65-4dce-99d4-6bb2d9b1c1c7/image.png"
+      logo: "https://brandlogos.net/wp-content/uploads/2021/11/fortinet-logo.png"
     }
   ];
 
