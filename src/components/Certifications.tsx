@@ -149,7 +149,7 @@ const Certifications = () => {
       "Amazon Web Services": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
       "ISC²": "https://images.credly.com/images/2030e43f-8003-4d4b-9630-847add403c87/image.png",
       "IBM": "https://images.vexels.com/content/140583/preview/ibm-logo-9289b6.png",
-      "Cisco": "/src/assets/cisco-logo.png",
+      "Cisco": "https://images.seeklogo.com/logo-png/3/2/cisco-logo-png_seeklogo-30674.png",
       "Palo Alto Networks": "https://www.paloaltonetworks.com/content/dam/pan/en_US/images/logos/brand/primary-company-logo/Parent-logo/PANW_Parent_Logo_Primary_Reverse_RGB.svg",
       "Stellar Cyber": "https://stellarcyber.ai/wp-content/uploads/2021/03/stellar-cyber-logo.png",
       "Fortinet": "https://images.credly.com/images/e4042b4b-7f65-4dce-99d4-6bb2d9b1c1c7/image.png"
