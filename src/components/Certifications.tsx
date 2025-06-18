@@ -67,7 +67,7 @@ const Certifications = () => {
       name: "IBM Cybersecurity Fundamentals",
       issuer: "IBM",
       year: "2024",
-      logo: "/src/assets/ibm-logo.png"
+      logo: "https://kreafolk.com/blogs/articles/ibm-logo-designg"
     },
     {
       name: "Cisco Junior Cybersecurity Analyst",
