@@ -85,7 +85,7 @@ const Certifications = () => {
       name: "Stellar Certified SOC Analyst",
       issuer: "Stellar Cyber",
       year: "2024",
-      logo: "https://stellarcyber.ai/wp-content/uploads/2021/03/stellar-cyber-logo.png"
+      logo: "https://opensearch.org/wp-content/uploads/2025/01/stellar-cyber.png"
     },
     {
       name: "Fortinet Network Security Expert Level 1",
