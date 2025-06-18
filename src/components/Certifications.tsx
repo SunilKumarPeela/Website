@@ -148,7 +148,7 @@ const Certifications = () => {
       "Google": "https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA",
       "Amazon Web Services": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
       "ISC²": "https://images.credly.com/images/2030e43f-8003-4d4b-9630-847add403c87/image.png",
-      "IBM": "/src/assets/ibm-logo.png",
+      "IBM": "https://images.vexels.com/content/140583/preview/ibm-logo-9289b6.png",
       "Cisco": "/src/assets/cisco-logo.png",
       "Palo Alto Networks": "https://www.paloaltonetworks.com/content/dam/pan/en_US/images/logos/brand/primary-company-logo/Parent-logo/PANW_Parent_Logo_Primary_Reverse_RGB.svg",
       "Stellar Cyber": "https://stellarcyber.ai/wp-content/uploads/2021/03/stellar-cyber-logo.png",
