@@ -152,7 +152,7 @@ const Certifications = () => {
       "Cisco": "https://images.seeklogo.com/logo-png/3/2/cisco-logo-png_seeklogo-30674.png",
       "Palo Alto Networks": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbG0qSOnkWntqk7zXknVCGVC9n18MFOcgfdA&s",
       "Stellar Cyber": "https://opensearch.org/wp-content/uploads/2025/01/stellar-cyber.pnghttps://opensearch.org/wp-content/uploads/2025/01/stellar-cyber.png",
-      "Fortinet": "https://images.credly.com/images/e4042b4b-7f65-4dce-99d4-6bb2d9b1c1c7/image.png"
+      "Fortinet": "https://brandlogos.net/wp-content/uploads/2021/11/fortinet-logo.pnhttps://brandlogos.net/wp-content/uploads/2021/11/fortinet-logo.png"
     };
     return logos[brand];
   };
