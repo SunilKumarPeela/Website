@@ -43,9 +43,16 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
+            {/* Shield Icon */}
+            <div className="flex justify-center lg:justify-start mb-6 lg:mb-8">
+              <div className="p-3 bg-cyan-500/10 rounded-full border border-cyan-500/20">
+                <Shield className="h-10 w-10 sm:h-12 sm:w-12 text-cyan-400" />
+              </div>
+            </div>
+            
+            {/* Name - Moved below and kept on single line */}
             <div className="mb-6 lg:mb-8">
-              {/* Name */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent leading-tight mb-4 lg:mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent leading-tight mb-4 lg:mb-6 whitespace-nowrap overflow-hidden">
                 Sunil Kumar Peela
               </h1>
               
