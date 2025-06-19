@@ -190,21 +190,16 @@ const Hero = () => {
               <div className="absolute bottom-12 left-8 w-2 h-2 bg-cyan-300 rounded-full animate-ping delay-300"></div>
               <div className="absolute top-1/2 -right-4 w-1.5 h-1.5 bg-cyan-500 rounded-full animate-pulse delay-700"></div>
 
-              {/* Professional badges - Rearranged for better positioning */}
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-3">
-                {/* Top badge */}
+              {/* Professional badges - Single horizontal line between image and shield */}
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4">
+                <div className="bg-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-full px-3 py-1">
+                  <span className="text-xs font-medium text-cyan-300">BlueTeam</span>
+                </div>
+                <div className="bg-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-full px-3 py-1">
+                  <span className="text-xs font-medium text-cyan-300">RedTeam</span>
+                </div>
                 <div className="bg-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-full px-3 py-1">
                   <span className="text-xs font-medium text-cyan-300">CloudSecurity</span>
-                </div>
-                
-                {/* Bottom row badges */}
-                <div className="flex space-x-4">
-                  <div className="bg-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-full px-3 py-1">
-                    <span className="text-xs font-medium text-cyan-300">BlueTeam</span>
-                  </div>
-                  <div className="bg-gray-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-full px-3 py-1">
-                    <span className="text-xs font-medium text-cyan-300">RedTeam</span>
-                  </div>
                 </div>
               </div>
             </div>
