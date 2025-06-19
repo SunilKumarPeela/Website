@@ -210,8 +210,16 @@ const Education = () => {
                   </div>
                 </div>
 
-                {/* Spacer for opposite side */}
-                <div className="hidden md:block w-5/12"></div>
+                {/* Year Display on Opposite Side */}
+                <div className={`hidden md:block w-5/12 ${
+                  index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'
+                } flex items-center ${
+                  index % 2 === 0 ? 'justify-start' : 'justify-end'
+                }`}>
+                  <div className="text-8xl font-bold text-white/10 select-none">
+                    {edu.year}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
