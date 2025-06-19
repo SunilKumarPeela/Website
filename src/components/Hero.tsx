@@ -38,12 +38,9 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="text-center lg:text-left">
-            {/* Name with Shield Icon */}
-            <div className="flex items-center justify-center lg:justify-start mb-6">
-              <div className="p-3 bg-cyan-500/10 rounded-full border border-cyan-500/20 mr-4">
-                <Shield className="h-12 w-12 text-cyan-400" />
-              </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent whitespace-nowrap">
+            {/* Name without Shield Icon */}
+            <div className="mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent">
                 Sunil Kumar Peela
               </h1>
             </div>
