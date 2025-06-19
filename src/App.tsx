@@ -75,12 +75,9 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-900/95 backdrop-blur-sm border-b border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo/Brand */}
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SKP</span>
-              </div>
-              <span className="text-white font-bold text-lg hidden sm:block">Sunil Kumar Peela</span>
+            {/* Logo/Brand - Simplified */}
+            <div className="flex items-center">
+              <span className="text-white font-bold text-lg">Sunil Kumar Peela</span>
             </div>
 
             {/* Desktop Navigation */}
