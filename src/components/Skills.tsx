@@ -198,32 +198,6 @@ const Skills = () => {
             </div>
           </div>
         </div>
-
-        {/* Core Competencies Summary */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">Core Competencies</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              'Cybersecurity Analysis',
-              'Threat Detection & Response', 
-              'Cloud Security',
-              'Network Security',
-              'Vulnerability Assessment',
-              'Incident Response',
-              'Security Automation',
-              'Compliance & Risk Management',
-              'Digital Forensics',
-              'Security Architecture'
-            ].map((competency, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform duration-200 cursor-pointer shadow-lg"
-              >
-                {competency}
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
