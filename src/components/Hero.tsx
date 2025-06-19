@@ -59,7 +59,7 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Contact Links */}
+            {/* Contact Links with Resume */}
             <div className="flex justify-center lg:justify-start space-x-4 mb-8">
               <a
                 href="https://www.linkedin.com/in/sunilkumarpeela/"
@@ -88,16 +88,14 @@ const Hero = () => {
                 <Mail className="h-5 w-5 text-cyan-400 group-hover:text-cyan-300" />
                 <span className="text-gray-300 group-hover:text-white font-medium">Email</span>
               </a>
-            </div>
 
-            {/* Resume Download Button */}
-            <div className="flex justify-center lg:justify-start mb-8">
+              {/* Resume Download Button - Next to Email */}
               <button
                 onClick={handleResumeDownload}
-                className="group flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+                className="group flex items-center space-x-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 <Download className="h-5 w-5 group-hover:animate-bounce" />
-                <span>Download Resume</span>
+                <span>Resume</span>
               </button>
             </div>
 
