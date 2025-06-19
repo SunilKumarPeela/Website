@@ -8,7 +8,6 @@ const Education = () => {
       institution: "Colorado State University",
       location: "Fort Collins, CO, USA",
       period: "January 2023 - May 2025",
-      dateRange: "January 2023 - May 2025",
       year: "2025",
       type: "education",
       gpa: "3.8 GPA",
@@ -30,7 +29,6 @@ const Education = () => {
       institution: "Jawaharlal Nehru Technological University",
       location: "Andhra Pradesh, India",
       period: "January 2015 - December 2016",
-      dateRange: "January 2015 - December 2016",
       year: "2016",
       type: "education",
       gpa: "91%",
@@ -52,7 +50,6 @@ const Education = () => {
       institution: "Jawaharlal Nehru Technological University",
       location: "Andhra Pradesh, India",
       period: "August 2010 - May 2014",
-      dateRange: "August 2010 - May 2014",
       year: "2014",
       type: "education",
       gpa: "80.5%",
@@ -108,15 +105,9 @@ const Education = () => {
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 } flex-col md:flex-none`}
               >
-                {/* Timeline Node with Year */}
-                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 z-10 flex flex-col items-center">
-                  <div className="w-6 h-6 bg-cyan-400 rounded-full border-4 border-gray-800 relative">
-                    <div className="absolute inset-0 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
-                  </div>
-                  {/* Year Badge */}
-                  <div className="mt-2 px-3 py-1 bg-cyan-500 text-white rounded-full text-sm font-bold shadow-lg">
-                    {edu.year}
-                  </div>
+                {/* Timeline Node */}
+                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-gray-800 transform md:-translate-x-2 z-10">
+                  <div className="absolute inset-0 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
                 </div>
 
                 {/* Content Card */}
@@ -213,14 +204,14 @@ const Education = () => {
                   </div>
                 </div>
 
-                {/* Date Range Display on Opposite Side */}
+                {/* Year Display on Opposite Side */}
                 <div className={`hidden md:block w-5/12 ${
                   index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'
                 } flex items-center ${
                   index % 2 === 0 ? 'justify-start' : 'justify-end'
                 }`}>
-                  <div className="text-6xl font-bold text-white/10 select-none text-center leading-tight">
-                    {edu.dateRange}
+                  <div className="text-8xl font-bold text-white select-none">
+                    {edu.year}
                   </div>
                 </div>
               </div>
