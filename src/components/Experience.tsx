@@ -8,7 +8,6 @@ const Experience = () => {
       company: "Cloud Security Alliance",
       location: "Online",
       period: "June 2025 - Present",
-      year: "2025",
       type: "work",
       description: "SOC analysis on Azure, Microsoft cloud with drop zone AI console. Advanced security operations and threat detection in cloud environments.",
       achievements: [
@@ -24,7 +23,6 @@ const Experience = () => {
       company: "Colorado State University",
       location: "Fort Collins, CO",
       period: "December 2024 - May 2025",
-      year: "2024",
       type: "work",
       description: "Led Tech Masters Connect club, organizing cybersecurity events, workshops, and professional development activities for 100+ members.",
       achievements: [
@@ -40,7 +38,6 @@ const Experience = () => {
       company: "Colorado State University",
       location: "Fort Collins, CO",
       period: "January 2024 - May 2024",
-      year: "2024",
       type: "work",
       description: "Performed network traffic analysis using packet capture tools and Python scripts to detect anomalous patterns across sample data sets.",
       achievements: [
@@ -56,7 +53,6 @@ const Experience = () => {
       company: "Amazon",
       location: "Telangana, India",
       period: "October 2018 - December 2022",
-      year: "2018",
       type: "work",
       description: "Investigated high-risk online transactions to prevent fraud and ensure the security and integrity of the Amazon marketplace. Conducted real-time transaction monitoring, risk assessment, and incident handling using Amazon's internal security tools and frameworks.",
       achievements: [
@@ -73,7 +69,6 @@ const Experience = () => {
       company: "Tech Mahindra",
       location: "Andhra Pradesh, India",
       period: "September 2016 - October 2018",
-      year: "2016",
       type: "work",
       description: "Monitored, analyzed, and optimized network traffic and performance using packet analysis tools and custom Python scripts. Collaborated with security teams to identify anomalies, enhance incident response readiness, and strengthen overall network defense.",
       achievements: [
@@ -89,7 +84,6 @@ const Experience = () => {
       company: "Jawaharlal Nehru Technological University",
       location: "AP, India",
       period: "2015 - 2017",
-      year: "2015",
       type: "work",
       description: "Conducted interdisciplinary research on emerging Post-Quantum Encryption techniques to address vulnerabilities in classical cryptographic systems under quantum computing threats. Focused on quantum-safe cryptography integration with secure communication systems.",
       achievements: [
@@ -158,10 +152,6 @@ const Experience = () => {
                             {exp.type === 'education' ? 'Education' : 'Work Experience'}
                           </span>
                         </div>
-                        <div className="flex items-center text-gray-400 text-sm">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          {exp.period}
-                        </div>
                       </div>
 
                       {/* Company Logo and Info */}
@@ -209,22 +199,19 @@ const Experience = () => {
                   </div>
                 </div>
 
-                {/* Year Display with Horizontal Line */}
+                {/* Date Display with Horizontal Line */}
                 <div className={`hidden md:block w-5/12 ${
                   index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'
                 } flex items-center ${
                   index % 2 === 0 ? 'justify-start' : 'justify-end'
                 }`}>
                   <div className="flex items-center">
-                    {/* Horizontal line from timeline to year */}
+                    {/* Horizontal line from timeline to date */}
                     {index % 2 === 0 ? (
                       <>
                         <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
                         <div className="ml-4">
-                          <div className="text-4xl font-bold text-white select-none mb-1">
-                            {exp.year}
-                          </div>
-                          <div className="text-sm text-gray-400 font-medium">
+                          <div className="text-lg font-bold text-white select-none">
                             {exp.period}
                           </div>
                         </div>
@@ -232,10 +219,7 @@ const Experience = () => {
                     ) : (
                       <>
                         <div className="mr-4 text-right">
-                          <div className="text-4xl font-bold text-white select-none mb-1">
-                            {exp.year}
-                          </div>
-                          <div className="text-sm text-gray-400 font-medium">
+                          <div className="text-lg font-bold text-white select-none">
                             {exp.period}
                           </div>
                         </div>

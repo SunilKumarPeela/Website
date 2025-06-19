@@ -8,7 +8,6 @@ const Education = () => {
       institution: "Colorado State University",
       location: "Fort Collins, CO, USA",
       period: "January 2023 - May 2025",
-      year: "2025",
       type: "education",
       gpa: "3.8 GPA",
       status: "Current",
@@ -29,7 +28,6 @@ const Education = () => {
       institution: "Jawaharlal Nehru Technological University",
       location: "Andhra Pradesh, India",
       period: "January 2015 - December 2016",
-      year: "2016",
       type: "education",
       gpa: "91%",
       status: "Completed",
@@ -50,7 +48,6 @@ const Education = () => {
       institution: "Jawaharlal Nehru Technological University",
       location: "Andhra Pradesh, India",
       period: "August 2010 - May 2014",
-      year: "2014",
       type: "education",
       gpa: "80.5%",
       status: "Completed",
@@ -127,10 +124,6 @@ const Education = () => {
                             Education
                           </span>
                         </div>
-                        <div className="flex items-center text-gray-400 text-sm">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          {edu.period}
-                        </div>
                       </div>
 
                       {/* Institution Logo and Info */}
@@ -204,22 +197,19 @@ const Education = () => {
                   </div>
                 </div>
 
-                {/* Year Display with Horizontal Line */}
+                {/* Date Display with Horizontal Line */}
                 <div className={`hidden md:block w-5/12 ${
                   index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'
                 } flex items-center ${
                   index % 2 === 0 ? 'justify-start' : 'justify-end'
                 }`}>
                   <div className="flex items-center">
-                    {/* Horizontal line from timeline to year */}
+                    {/* Horizontal line from timeline to date */}
                     {index % 2 === 0 ? (
                       <>
                         <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
                         <div className="ml-4">
-                          <div className="text-4xl font-bold text-white select-none mb-1">
-                            {edu.year}
-                          </div>
-                          <div className="text-sm text-gray-400 font-medium">
+                          <div className="text-lg font-bold text-white select-none">
                             {edu.period}
                           </div>
                         </div>
@@ -227,10 +217,7 @@ const Education = () => {
                     ) : (
                       <>
                         <div className="mr-4 text-right">
-                          <div className="text-4xl font-bold text-white select-none mb-1">
-                            {edu.year}
-                          </div>
-                          <div className="text-sm text-gray-400 font-medium">
+                          <div className="text-lg font-bold text-white select-none">
                             {edu.period}
                           </div>
                         </div>
