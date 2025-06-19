@@ -12,13 +12,13 @@ const Certifications = () => {
       name: "CompTIA Security+",
       issuer: "CompTIA",
       year: "2025",
-      logo: "/src/assets/Compita.jpg"
+      logo: "https://images.seeklogo.com/logo-png/26/2/comptia-logo-png_seeklogo-268916.png"
     },
     {
       name: "CompTIA Cybersecurity Analyst+",
       issuer: "CompTIA", 
       year: "2025",
-      logo: "/src/assets/Compita.jpg"
+      logo: "https://images.seeklogo.com/logo-png/26/2/comptia-logo-png_seeklogo-268916.png"
     },
     {
       name: "Microsoft Security, Compliance, and Identity Fundamentals",
@@ -143,7 +143,7 @@ const Certifications = () => {
 
   const getBrandLogo = (brand) => {
     const logos = {
-      "CompTIA": "/src/assets/Compita.jpg",
+      "CompTIA": "https://images.seeklogo.com/logo-png/26/2/comptia-logo-png_seeklogo-268916.png",
       "Microsoft": "https://images.credly.com/images/fc1352af-87fa-4947-ba54-398a0e63322e/security-compliance-and-identity-fundamentals-600x600.png",
       "Google": "https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA",
       "Amazon Web Services": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
