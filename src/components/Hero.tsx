@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Lock, Globe, Eye, ChevronDown, Linkedin, Github, Mail } from 'lucide-react';
+import { Shield, Lock, Globe, Eye, ChevronDown, Linkedin, Github, Mail, Download } from 'lucide-react';
 
 const Hero = () => {
   const [currentQuote, setCurrentQuote] = useState(0);
@@ -19,7 +19,12 @@ const Hero = () => {
   }, []);
 
   const scrollToNext = () => {
-    document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleResumeDownload = () => {
+    // Open Google Drive link in new tab
+    window.open('https://drive.google.com/file/d/1l_UUleYsdXM9IlytpKy0Q_Pyf8ZDLanY/view?usp=sharing', '_blank');
   };
 
   return (
@@ -55,7 +60,7 @@ const Hero = () => {
             </div>
 
             {/* Contact Links */}
-            <div className="flex justify-center lg:justify-start space-x-6 mb-8">
+            <div className="flex justify-center lg:justify-start space-x-4 mb-8">
               <a
                 href="https://www.linkedin.com/in/sunilkumarpeela/"
                 target="_blank"
@@ -83,6 +88,17 @@ const Hero = () => {
                 <Mail className="h-5 w-5 text-cyan-400 group-hover:text-cyan-300" />
                 <span className="text-gray-300 group-hover:text-white font-medium">Email</span>
               </a>
+            </div>
+
+            {/* Resume Download Button */}
+            <div className="flex justify-center lg:justify-start mb-8">
+              <button
+                onClick={handleResumeDownload}
+                className="group flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+              >
+                <Download className="h-5 w-5 group-hover:animate-bounce" />
+                <span>Download Resume</span>
+              </button>
             </div>
 
             {/* Expertise Icons */}

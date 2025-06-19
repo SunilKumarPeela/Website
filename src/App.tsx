@@ -11,7 +11,6 @@ import Projects from './components/Projects'
 import Patents from './components/Patents'
 import Competitions from './components/Competitions'
 import Clubs from './components/Clubs'
-import Resume from './components/Resume'
 import Contact from './components/Contact'
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
     { id: 'patents', label: 'Patents' },
     { id: 'competitions', label: 'Competitions' },
     { id: 'clubs', label: 'Clubs' },
-    { id: 'resume', label: 'Resume' },
     { id: 'contact', label: 'Contact' }
   ];
 
@@ -146,7 +144,6 @@ function App() {
         <Patents />
         <Competitions />
         <Clubs />
-        <Resume />
         <Contact />
       </main>
     </div>
