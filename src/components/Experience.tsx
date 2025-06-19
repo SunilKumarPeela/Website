@@ -8,6 +8,7 @@ const Experience = () => {
       company: "Cloud Security Alliance",
       location: "Online",
       period: "June 2025 - Present",
+      dateRange: "June 2025 - Present",
       year: "2025",
       type: "work",
       description: "SOC analysis on Azure, Microsoft cloud with drop zone AI console. Advanced security operations and threat detection in cloud environments.",
@@ -24,6 +25,7 @@ const Experience = () => {
       company: "Colorado State University",
       location: "Fort Collins, CO",
       period: "December 2024 - May 2025",
+      dateRange: "December 2024 - May 2025",
       year: "2024",
       type: "work",
       description: "Led Tech Masters Connect club, organizing cybersecurity events, workshops, and professional development activities for 100+ members.",
@@ -40,6 +42,7 @@ const Experience = () => {
       company: "Colorado State University",
       location: "Fort Collins, CO",
       period: "January 2024 - May 2024",
+      dateRange: "January 2024 - May 2024",
       year: "2024",
       type: "work",
       description: "Performed network traffic analysis using packet capture tools and Python scripts to detect anomalous patterns across sample data sets.",
@@ -56,6 +59,7 @@ const Experience = () => {
       company: "Amazon",
       location: "Telangana, India",
       period: "October 2018 - December 2022",
+      dateRange: "October 2018 - December 2022",
       year: "2018",
       type: "work",
       description: "Investigated high-risk online transactions to prevent fraud and ensure the security and integrity of the Amazon marketplace. Conducted real-time transaction monitoring, risk assessment, and incident handling using Amazon's internal security tools and frameworks.",
@@ -73,6 +77,7 @@ const Experience = () => {
       company: "Tech Mahindra",
       location: "Andhra Pradesh, India",
       period: "September 2016 - October 2018",
+      dateRange: "September 2016 - October 2018",
       year: "2016",
       type: "work",
       description: "Monitored, analyzed, and optimized network traffic and performance using packet analysis tools and custom Python scripts. Collaborated with security teams to identify anomalies, enhance incident response readiness, and strengthen overall network defense.",
@@ -89,6 +94,7 @@ const Experience = () => {
       company: "Jawaharlal Nehru Technological University",
       location: "AP, India",
       period: "2015 - 2017",
+      dateRange: "2015 - 2017",
       year: "2015",
       type: "work",
       description: "Conducted interdisciplinary research on emerging Post-Quantum Encryption techniques to address vulnerabilities in classical cryptographic systems under quantum computing threats. Focused on quantum-safe cryptography integration with secure communication systems.",
@@ -215,14 +221,14 @@ const Experience = () => {
                   </div>
                 </div>
 
-                {/* Year Display on Opposite Side */}
+                {/* Date Range Display on Opposite Side */}
                 <div className={`hidden md:block w-5/12 ${
                   index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'
                 } flex items-center ${
                   index % 2 === 0 ? 'justify-start' : 'justify-end'
                 }`}>
-                  <div className="text-8xl font-bold text-white/10 select-none">
-                    {exp.year}
+                  <div className="text-6xl font-bold text-white/10 select-none text-center leading-tight">
+                    {exp.dateRange}
                   </div>
                 </div>
               </div>
