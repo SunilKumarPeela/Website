@@ -8,6 +8,7 @@ const Experience = () => {
       company: "Cloud Security Alliance",
       location: "Online",
       period: "June 2025 - Present",
+      year: "2025",
       type: "work",
       description: "SOC analysis on Azure, Microsoft cloud with drop zone AI console. Advanced security operations and threat detection in cloud environments.",
       achievements: [
@@ -23,6 +24,7 @@ const Experience = () => {
       company: "Colorado State University",
       location: "Fort Collins, CO",
       period: "December 2024 - May 2025",
+      year: "2024",
       type: "work",
       description: "Led Tech Masters Connect club, organizing cybersecurity events, workshops, and professional development activities for 100+ members.",
       achievements: [
@@ -38,6 +40,7 @@ const Experience = () => {
       company: "Colorado State University",
       location: "Fort Collins, CO",
       period: "January 2024 - May 2024",
+      year: "2024",
       type: "work",
       description: "Performed network traffic analysis using packet capture tools and Python scripts to detect anomalous patterns across sample data sets.",
       achievements: [
@@ -53,6 +56,7 @@ const Experience = () => {
       company: "Amazon",
       location: "Telangana, India",
       period: "October 2018 - December 2022",
+      year: "2018",
       type: "work",
       description: "Investigated high-risk online transactions to prevent fraud and ensure the security and integrity of the Amazon marketplace. Conducted real-time transaction monitoring, risk assessment, and incident handling using Amazon's internal security tools and frameworks.",
       achievements: [
@@ -69,6 +73,7 @@ const Experience = () => {
       company: "Tech Mahindra",
       location: "Andhra Pradesh, India",
       period: "September 2016 - October 2018",
+      year: "2016",
       type: "work",
       description: "Monitored, analyzed, and optimized network traffic and performance using packet analysis tools and custom Python scripts. Collaborated with security teams to identify anomalies, enhance incident response readiness, and strengthen overall network defense.",
       achievements: [
@@ -84,6 +89,7 @@ const Experience = () => {
       company: "Jawaharlal Nehru Technological University",
       location: "AP, India",
       period: "2015 - 2017",
+      year: "2015",
       type: "work",
       description: "Conducted interdisciplinary research on emerging Post-Quantum Encryption techniques to address vulnerabilities in classical cryptographic systems under quantum computing threats. Focused on quantum-safe cryptography integration with secure communication systems.",
       achievements: [
@@ -122,9 +128,15 @@ const Experience = () => {
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 } flex-col md:flex-none`}
               >
-                {/* Timeline Node */}
-                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-gray-800 transform md:-translate-x-2 z-10">
-                  <div className="absolute inset-0 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
+                {/* Timeline Node with Year */}
+                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 z-10 flex flex-col items-center">
+                  <div className="w-6 h-6 bg-cyan-400 rounded-full border-4 border-gray-800 relative">
+                    <div className="absolute inset-0 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
+                  </div>
+                  {/* Year Badge */}
+                  <div className="mt-2 px-3 py-1 bg-cyan-500 text-white rounded-full text-sm font-bold shadow-lg">
+                    {exp.year}
+                  </div>
                 </div>
 
                 {/* Content Card */}
