@@ -190,63 +190,63 @@ const Hero = () => {
               <div className="absolute bottom-12 left-8 w-2 h-2 bg-cyan-300 rounded-full animate-ping delay-300"></div>
               <div className="absolute top-1/2 -right-4 w-1.5 h-1.5 bg-cyan-500 rounded-full animate-pulse delay-700"></div>
 
-              {/* Curved Professional Badges - OUTSIDE the image */}
-              <div className="absolute inset-0 pointer-events-none" style={{ transform: 'scale(1.4)' }}>
+              {/* Curved Professional Badges - OUTSIDE the image with proper scaling */}
+              <div className="absolute inset-0 pointer-events-none" style={{ transform: 'scale(1.5)' }}>
                 <svg className="w-full h-full" viewBox="0 0 400 400">
                   <defs>
-                    {/* Define curved paths OUTSIDE the circle */}
+                    {/* Define curved paths OUTSIDE the circle - adjusted for better visibility */}
                     <path
                       id="topCurve"
-                      d="M 60 80 A 140 140 0 0 1 340 80"
+                      d="M 80 60 A 120 120 0 0 1 320 60"
                       fill="none"
                     />
                     <path
                       id="bottomLeftCurve"
-                      d="M 40 280 A 160 160 0 0 1 140 60"
+                      d="M 60 300 A 140 140 0 0 1 160 80"
                       fill="none"
                     />
                     <path
                       id="bottomRightCurve"
-                      d="M 260 60 A 160 160 0 0 1 360 280"
+                      d="M 240 80 A 140 140 0 0 1 340 300"
                       fill="none"
                     />
                   </defs>
                   
-                  {/* Curved Text Elements - OUTSIDE the image */}
-                  <text className="fill-cyan-300 text-sm font-bold tracking-wider" style={{ fontSize: '16px' }}>
+                  {/* Curved Text Elements - OUTSIDE the image with enhanced visibility */}
+                  <text className="fill-cyan-300 font-bold tracking-widest" style={{ fontSize: '18px', fontWeight: '800' }}>
                     <textPath href="#topCurve" startOffset="50%" textAnchor="middle">
                       BLUETEAM
                     </textPath>
                   </text>
                   
-                  <text className="fill-cyan-300 text-sm font-bold tracking-wider" style={{ fontSize: '16px' }}>
+                  <text className="fill-cyan-300 font-bold tracking-widest" style={{ fontSize: '18px', fontWeight: '800' }}>
                     <textPath href="#bottomLeftCurve" startOffset="50%" textAnchor="middle">
                       REDTEAM
                     </textPath>
                   </text>
                   
-                  <text className="fill-cyan-300 text-sm font-bold tracking-wider" style={{ fontSize: '16px' }}>
+                  <text className="fill-cyan-300 font-bold tracking-widest" style={{ fontSize: '16px', fontWeight: '800' }}>
                     <textPath href="#bottomRightCurve" startOffset="50%" textAnchor="middle">
                       CLOUDSECURITY
                     </textPath>
                   </text>
                 </svg>
 
-                {/* Decorative dots along the curves - OUTSIDE */}
-                <div className="absolute top-[15%] left-[20%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse"></div>
-                <div className="absolute top-[15%] right-[20%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-300"></div>
-                <div className="absolute top-[10%] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-500"></div>
+                {/* Enhanced decorative dots along the curves - OUTSIDE */}
+                <div className="absolute top-[8%] left-[25%] w-3 h-3 bg-cyan-400/80 rounded-full animate-pulse shadow-lg shadow-cyan-400/50"></div>
+                <div className="absolute top-[8%] right-[25%] w-3 h-3 bg-cyan-400/80 rounded-full animate-pulse delay-300 shadow-lg shadow-cyan-400/50"></div>
+                <div className="absolute top-[5%] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-cyan-400/80 rounded-full animate-pulse delay-500 shadow-lg shadow-cyan-400/50"></div>
                 
-                <div className="absolute bottom-[15%] left-[15%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-700"></div>
-                <div className="absolute bottom-[15%] right-[15%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-1000"></div>
+                <div className="absolute bottom-[8%] left-[20%] w-3 h-3 bg-cyan-400/80 rounded-full animate-pulse delay-700 shadow-lg shadow-cyan-400/50"></div>
+                <div className="absolute bottom-[8%] right-[20%] w-3 h-3 bg-cyan-400/80 rounded-full animate-pulse delay-1000 shadow-lg shadow-cyan-400/50"></div>
                 
-                {/* Additional accent elements */}
-                <div className="absolute top-[12%] left-[12%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-700"></div>
-                <div className="absolute top-[12%] right-[12%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1000"></div>
-                <div className="absolute top-[8%] left-1/2 transform -translate-x-1/2 w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1200"></div>
+                {/* Additional accent elements for better visibility */}
+                <div className="absolute top-[6%] left-[20%] w-1.5 h-1.5 bg-cyan-300/60 rounded-full animate-ping delay-700"></div>
+                <div className="absolute top-[6%] right-[20%] w-1.5 h-1.5 bg-cyan-300/60 rounded-full animate-ping delay-1000"></div>
+                <div className="absolute top-[3%] left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-cyan-300/60 rounded-full animate-ping delay-1200"></div>
                 
-                <div className="absolute bottom-[12%] left-[10%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1400"></div>
-                <div className="absolute bottom-[12%] right-[10%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1600"></div>
+                <div className="absolute bottom-[6%] left-[15%] w-1.5 h-1.5 bg-cyan-300/60 rounded-full animate-ping delay-1400"></div>
+                <div className="absolute bottom-[6%] right-[15%] w-1.5 h-1.5 bg-cyan-300/60 rounded-full animate-ping delay-1600"></div>
               </div>
             </div>
           </div>
