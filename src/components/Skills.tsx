@@ -78,16 +78,6 @@ const Skills = () => {
     ]
   };
 
-  const certifications = [
-    { name: 'CompTIA Security+', logo: 'https://images.credly.com/images/74790a75-8451-400a-8536-92d792b5184a/CompTIA_Security_2Bce.png' },
-    { name: 'CompTIA CySA+', logo: 'https://images.credly.com/images/0c6d9839-f468-4adc-987d-5cfae4a9ee67/image.png' },
-    { name: 'Microsoft SC-900', logo: 'https://images.credly.com/images/fc1352af-87fa-4947-ba54-398a0e63322e/security-compliance-and-identity-fundamentals-600x600.png' },
-    { name: 'AWS Cloud Practitioner', logo: 'https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png' },
-    { name: 'Google Cybersecurity Certificate', logo: 'https://images.credly.com/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png' },
-    { name: 'ISC² Certified in Cybersecurity (CC)', logo: 'https://images.credly.com/images/2030e43f-8003-4d4b-9630-847add403c87/image.png' },
-    { name: 'Google Threat Intelligence Certificate', logo: 'https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA' }
-  ];
-
   const categories = ['all', ...Object.keys(skillCategories)];
 
   const getFilteredSkills = () => {
@@ -173,45 +163,6 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Professional Certifications with Logos */}
-        <div className="bg-gray-800 rounded-xl p-8 border border-gray-700 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-            <div className="w-2 h-8 bg-gradient-to-b from-green-400 to-emerald-600 rounded-full mr-4"></div>
-            Professional Certifications
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="flex items-center p-4 bg-gray-900/50 rounded-lg border border-gray-600 hover:border-green-500/50 transition-all duration-300 hover:bg-gray-900/70 group hover:scale-105"
-              >
-                {/* Certification Logo Circle */}
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300 overflow-hidden border-2 border-green-400/20">
-                  <img
-                    src={cert.logo}
-                    alt={`${cert.name} logo`}
-                    className="w-10 h-10 object-contain"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling.style.display = 'block';
-                    }}
-                  />
-                  <CheckCircle className="h-6 w-6 text-green-400" style={{ display: 'none' }} />
-                </div>
-                
-                {/* Certification Name */}
-                <span className="text-gray-300 group-hover:text-white transition-colors duration-200 font-medium flex-1">
-                  {cert.name}
-                </span>
-                
-                {/* Verified Badge */}
-                <CheckCircle className="h-5 w-5 text-green-400 ml-2 group-hover:scale-110 transition-transform duration-200" />
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Skills Summary Statistics */}
         <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
           <h3 className="text-2xl font-bold text-white text-center mb-8">Skills Portfolio Overview</h3>
@@ -226,7 +177,7 @@ const Skills = () => {
             </div>
             <div className="text-center group">
               <div className="text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-                {certifications.length}
+                14+
               </div>
               <div className="text-gray-300 font-medium">Certifications</div>
               <div className="text-xs text-gray-500 mt-1">Industry recognized</div>
