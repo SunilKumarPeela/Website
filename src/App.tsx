@@ -7,7 +7,6 @@ import Certifications from './components/Certifications'
 import OnlineTraining from './components/OnlineTraining'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
-import SkillsGraph from './components/SkillsGraph'
 import Projects from './components/Projects'
 import Patents from './components/Patents'
 import Competitions from './components/Competitions'
@@ -26,7 +25,6 @@ function App() {
     { id: 'experience', label: 'Experience' },
     { id: 'training', label: 'Training' },
     { id: 'skills', label: 'Skills' },
-    { id: 'skills-graph', label: 'Skills Graph' },
     { id: 'projects', label: 'Projects' },
     { id: 'patents', label: 'Patents' },
     { id: 'competitions', label: 'Competitions' },
@@ -142,7 +140,6 @@ function App() {
         <Experience />
         <OnlineTraining />
         <Skills />
-        <SkillsGraph />
         <Projects />
         <Patents />
         <Competitions />
