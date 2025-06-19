@@ -1,3 +1,4 @@
+<parameter name="filePath">src/components/Skills.tsx</parameter>
 import React, { useState } from 'react';
 import { Shield, Server, Code, Eye, Lock, Globe, Cpu, Cloud, Database, Network, Zap, Settings, CheckCircle, Wifi, HardDrive, Terminal, Key, FileText, Activity, Layers, GitBranch, Braces, Monitor, Target, Search } from 'lucide-react';
 
@@ -102,6 +103,11 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <div className="flex justify-center mb-4">
+            <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-500/30">
+              <Target className="h-12 w-12 text-cyan-400" />
+            </div>
+          </div>
           <h2 className="text-4xl font-bold text-white mb-4">Skills</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive cybersecurity expertise across multiple domains and technologies
@@ -266,3 +272,4 @@ const Skills = () => {
 };
 
 export default Skills;
+</parameter>
