@@ -209,14 +209,39 @@ const Experience = () => {
                   </div>
                 </div>
 
-                {/* Year Display on Opposite Side */}
+                {/* Year Display with Horizontal Line */}
                 <div className={`hidden md:block w-5/12 ${
                   index % 2 === 0 ? 'md:ml-8' : 'md:mr-8'
                 } flex items-center ${
                   index % 2 === 0 ? 'justify-start' : 'justify-end'
                 }`}>
-                  <div className="text-8xl font-bold text-white select-none">
-                    {exp.year}
+                  <div className="flex items-center">
+                    {/* Horizontal line from timeline to year */}
+                    {index % 2 === 0 ? (
+                      <>
+                        <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                        <div className="ml-4">
+                          <div className="text-4xl font-bold text-white select-none mb-1">
+                            {exp.year}
+                          </div>
+                          <div className="text-sm text-gray-400 font-medium">
+                            {exp.period}
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="mr-4 text-right">
+                          <div className="text-4xl font-bold text-white select-none mb-1">
+                            {exp.year}
+                          </div>
+                          <div className="text-sm text-gray-400 font-medium">
+                            {exp.period}
+                          </div>
+                        </div>
+                        <div className="w-16 h-0.5 bg-gradient-to-l from-cyan-400 to-transparent"></div>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
