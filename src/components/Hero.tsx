@@ -190,57 +190,63 @@ const Hero = () => {
               <div className="absolute bottom-12 left-8 w-2 h-2 bg-cyan-300 rounded-full animate-ping delay-300"></div>
               <div className="absolute top-1/2 -right-4 w-1.5 h-1.5 bg-cyan-500 rounded-full animate-pulse delay-700"></div>
 
-              {/* Curved Professional Badges */}
-              <div className="absolute inset-0 pointer-events-none">
+              {/* Curved Professional Badges - OUTSIDE the image */}
+              <div className="absolute inset-0 pointer-events-none" style={{ transform: 'scale(1.4)' }}>
                 <svg className="w-full h-full" viewBox="0 0 400 400">
                   <defs>
-                    {/* Define curved paths for text */}
+                    {/* Define curved paths OUTSIDE the circle */}
                     <path
                       id="topCurve"
-                      d="M 80 120 A 120 120 0 0 1 320 120"
+                      d="M 60 80 A 140 140 0 0 1 340 80"
                       fill="none"
                     />
                     <path
-                      id="leftCurve"
-                      d="M 60 200 A 140 140 0 0 1 120 80"
+                      id="bottomLeftCurve"
+                      d="M 40 280 A 160 160 0 0 1 140 60"
                       fill="none"
                     />
                     <path
-                      id="rightCurve"
-                      d="M 280 80 A 140 140 0 0 1 340 200"
+                      id="bottomRightCurve"
+                      d="M 260 60 A 160 160 0 0 1 360 280"
                       fill="none"
                     />
                   </defs>
                   
-                  {/* Curved Text Elements */}
-                  <text className="fill-cyan-300 text-sm font-bold tracking-wider" style={{ fontSize: '14px' }}>
+                  {/* Curved Text Elements - OUTSIDE the image */}
+                  <text className="fill-cyan-300 text-sm font-bold tracking-wider" style={{ fontSize: '16px' }}>
                     <textPath href="#topCurve" startOffset="50%" textAnchor="middle">
                       BLUETEAM
                     </textPath>
                   </text>
                   
-                  <text className="fill-cyan-300 text-sm font-bold tracking-wider" style={{ fontSize: '14px' }}>
-                    <textPath href="#leftCurve" startOffset="50%" textAnchor="middle">
+                  <text className="fill-cyan-300 text-sm font-bold tracking-wider" style={{ fontSize: '16px' }}>
+                    <textPath href="#bottomLeftCurve" startOffset="50%" textAnchor="middle">
                       REDTEAM
                     </textPath>
                   </text>
                   
-                  <text className="fill-cyan-300 text-sm font-bold tracking-wider" style={{ fontSize: '14px' }}>
-                    <textPath href="#rightCurve" startOffset="50%" textAnchor="middle">
+                  <text className="fill-cyan-300 text-sm font-bold tracking-wider" style={{ fontSize: '16px' }}>
+                    <textPath href="#bottomRightCurve" startOffset="50%" textAnchor="middle">
                       CLOUDSECURITY
                     </textPath>
                   </text>
                 </svg>
 
-                {/* Decorative dots along the curves */}
-                <div className="absolute top-[30%] left-[20%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse"></div>
-                <div className="absolute top-[30%] right-[20%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-300"></div>
-                <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-500"></div>
+                {/* Decorative dots along the curves - OUTSIDE */}
+                <div className="absolute top-[15%] left-[20%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse"></div>
+                <div className="absolute top-[15%] right-[20%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-300"></div>
+                <div className="absolute top-[10%] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-500"></div>
+                
+                <div className="absolute bottom-[15%] left-[15%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-700"></div>
+                <div className="absolute bottom-[15%] right-[15%] w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse delay-1000"></div>
                 
                 {/* Additional accent elements */}
-                <div className="absolute top-[25%] left-[15%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-700"></div>
-                <div className="absolute top-[25%] right-[15%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1000"></div>
-                <div className="absolute top-[15%] left-1/2 transform -translate-x-1/2 w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1200"></div>
+                <div className="absolute top-[12%] left-[12%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-700"></div>
+                <div className="absolute top-[12%] right-[12%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1000"></div>
+                <div className="absolute top-[8%] left-1/2 transform -translate-x-1/2 w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1200"></div>
+                
+                <div className="absolute bottom-[12%] left-[10%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1400"></div>
+                <div className="absolute bottom-[12%] right-[10%] w-1 h-1 bg-cyan-300/40 rounded-full animate-ping delay-1600"></div>
               </div>
             </div>
           </div>
