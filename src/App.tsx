@@ -12,9 +12,11 @@ import Patents from './components/Patents'
 import Competitions from './components/Competitions'
 import Clubs from './components/Clubs'
 import Contact from './components/Contact'
+import { Menu, X } from 'lucide-react'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Navigation sections
   const sections = [
@@ -65,6 +67,8 @@ function App() {
         behavior: 'smooth'
       });
     }
+    // Close mobile menu after navigation
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -72,14 +76,19 @@ function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-900/95 backdrop-blur-sm border-b border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center h-16">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo/Brand */}
+            <div className="flex items-center">
+              <span className="text-white font-bold text-lg sm:text-xl lg:text-2xl">Sunil Kumar Peela</span>
+            </div>
+
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-1">
               {sections.map((section) => (
                 <button
                   key={section.id}
                   onClick={() => handleNavClick(section.id)}
-                  className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
+                  className={`relative px-3 xl:px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
                     activeSection === section.id
                       ? 'text-cyan-300 bg-cyan-500/20 border border-cyan-500/50 shadow-lg shadow-cyan-500/25'
                       : 'text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50'
@@ -96,19 +105,28 @@ function App() {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button className="text-gray-300 hover:text-white focus:outline-none focus:text-white">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+            <div className="lg:hidden">
+              <button 
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-gray-300 hover:text-white focus:outline-none focus:text-white p-2"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
         </div>
 
         {/* Mobile Navigation Menu */}
-        <div className="md:hidden bg-gray-900/98 backdrop-blur-sm border-t border-gray-700">
-          <div className="px-4 py-3 space-y-2">
+        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen 
+            ? 'max-h-screen opacity-100' 
+            : 'max-h-0 opacity-0 overflow-hidden'
+        } bg-gray-900/98 backdrop-blur-sm border-t border-gray-700`}>
+          <div className="px-4 py-3 space-y-2 max-h-[calc(100vh-4rem)] overflow-y-auto">
             {sections.map((section) => (
               <button
                 key={section.id}
