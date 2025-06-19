@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Award, ExternalLink, Calendar, CheckCircle, Filter, Star, Sparkles, Trophy, Target, Zap, Brain, Code, Shield, Globe, Users, Heart, Lightbulb, Rocket, Play, Clock, TrendingUp } from 'lucide-react';
+import { BookOpen, Award, Calendar, CheckCircle, Star, Sparkles, Trophy, Target, Zap, Brain, Code, Shield, Globe, Users, Heart, Lightbulb, Rocket, Clock } from 'lucide-react';
 
 const OnlineTraining = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
   const [isVisible, setIsVisible] = useState(false);
   const [currentTimelineIndex, setCurrentTimelineIndex] = useState(0);
 
@@ -54,46 +53,6 @@ const OnlineTraining = () => {
     // International & Policy
     { name: "Cyberdiplomacy Course", company: "United Nations Office for Disarmament Affairs", category: "Policy & Governance", year: "2024", level: "Advanced", icon: Globe, color: "from-slate-500 to-slate-600", duration: "9 hours" }
   ];
-
-  const categories = [
-    'all',
-    'Security Operations',
-    'Threat Intelligence',
-    'AI Security',
-    'Hands-on Training',
-    'Web Security',
-    'Cloud & Containers',
-    'Professional Development',
-    'Programming',
-    'Infrastructure Security',
-    'Policy & Governance'
-  ];
-
-  const filteredCertificates = activeCategory === 'all' 
-    ? certificates 
-    : certificates.filter(cert => cert.category === activeCategory);
-
-  const getCategoryColor = (category) => {
-    const colors = {
-      'Security Operations': 'from-blue-500 to-blue-600',
-      'Security Testing': 'from-red-500 to-red-600',
-      'Security Awareness': 'from-green-500 to-green-600',
-      'Threat Intelligence': 'from-purple-500 to-purple-600',
-      'Endpoint Protection': 'from-orange-500 to-orange-600',
-      'Cloud & Containers': 'from-cyan-500 to-cyan-600',
-      'Web Security': 'from-pink-500 to-pink-600',
-      'Artificial Intelligence': 'from-indigo-500 to-indigo-600',
-      'AI Security': 'from-violet-500 to-violet-600',
-      'Hands-on Training': 'from-emerald-500 to-emerald-600',
-      'Job Simulation': 'from-yellow-500 to-yellow-600',
-      'Professional Development': 'from-gray-500 to-gray-600',
-      'Programming': 'from-teal-500 to-teal-600',
-      'Personal Security': 'from-rose-500 to-rose-600',
-      'Infrastructure Security': 'from-amber-500 to-amber-600',
-      'Policy & Governance': 'from-slate-500 to-slate-600'
-    };
-    return colors[category] || 'from-gray-500 to-gray-600';
-  };
 
   const getLevelColor = (level) => {
     const colors = {
@@ -269,9 +228,11 @@ const OnlineTraining = () => {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Active Certificate Details */}
-          <div className="max-w-2xl mx-auto mt-8">
+        {/* Featured Certificate Display */}
+        <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="max-w-2xl mx-auto">
             <div className="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/20">
               <div className="text-center">
                 <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${certificates[currentTimelineIndex]?.color} text-white font-bold mb-4`}>
@@ -305,150 +266,6 @@ const OnlineTraining = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Category Filter */}
-        <div className={`mb-12 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="flex items-center justify-center mb-6">
-            <Filter className="h-5 w-5 text-cyan-400 mr-2" />
-            <span className="text-gray-300 font-medium">Filter by Category:</span>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  activeCategory === category
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-cyan-500/20'
-                }`}
-              >
-                {category === 'all' ? 'All Certificates ✨' : category}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Certificates Grid */}
-        <div className={`mb-16 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredCertificates.map((cert, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 rounded-2xl border border-cyan-500/20 hover:border-cyan-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 overflow-hidden group hover:scale-105"
-              >
-                {/* Certificate Header */}
-                <div className={`h-2 bg-gradient-to-r ${getCategoryColor(cert.category)}`}></div>
-                
-                <div className="p-6">
-                  {/* Certificate Icon and Duration */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${cert.color}`}>
-                      <cert.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {cert.duration}
-                    </div>
-                  </div>
-
-                  {/* Certificate Name */}
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-200 leading-tight">
-                    {cert.name}
-                  </h3>
-
-                  {/* Issuing Company */}
-                  <div className="text-cyan-400 font-medium text-sm mb-4">{cert.company}</div>
-
-                  {/* Category and Level */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-xs font-medium border border-cyan-500/20">
-                      {cert.category}
-                    </span>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getLevelColor(cert.level)}`}>
-                      {cert.level}
-                    </span>
-                  </div>
-
-                  {/* Verification Status */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center text-green-400 text-sm">
-                      <CheckCircle className="h-4 w-4 mr-1" />
-                      <span>Verified ✅</span>
-                    </div>
-                    
-                    <button className="flex items-center space-x-1 px-3 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors duration-200 text-sm font-medium">
-                      <ExternalLink className="h-4 w-4" />
-                      <span>View</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Training Statistics */}
-        <div className={`mb-16 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white text-center mb-8 flex items-center justify-center">
-              <Trophy className="h-8 w-8 text-yellow-400 mr-3" />
-              Training Portfolio Overview 📊
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center group">
-                <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {certificates.length}
-                </div>
-                <div className="text-gray-300 font-medium">Total Certificates</div>
-                <div className="text-sm text-gray-500 mt-1">Across all domains</div>
-              </div>
-              <div className="text-center group">
-                <div className="text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {certificates.reduce((total, cert) => total + parseInt(cert.duration), 0)}+
-                </div>
-                <div className="text-gray-300 font-medium">Training Hours</div>
-                <div className="text-sm text-gray-500 mt-1">Continuous learning</div>
-              </div>
-              <div className="text-center group">
-                <div className="text-4xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {[...new Set(certificates.map(cert => cert.category))].length}
-                </div>
-                <div className="text-gray-300 font-medium">Skill Categories</div>
-                <div className="text-sm text-gray-500 mt-1">Specialized areas</div>
-              </div>
-              <div className="text-center group">
-                <div className="text-4xl font-bold text-orange-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-                  2024
-                </div>
-                <div className="text-gray-300 font-medium">Latest Year</div>
-                <div className="text-sm text-gray-500 mt-1">Recent achievements</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Training Providers */}
-        <div className={`transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h3 className="text-2xl font-bold text-white text-center mb-8 flex items-center justify-center">
-            <Users className="h-8 w-8 text-blue-400 mr-3" />
-            Training Organizations 🏢
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[...new Set(certificates.map(cert => cert.company))].map((company, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 text-center py-6 px-4 rounded-xl border border-cyan-500/20 hover:border-cyan-400 transition-all duration-200 hover:shadow-md hover:scale-105"
-              >
-                <span className="text-white font-medium text-sm">{company}</span>
-                <div className="text-xs text-cyan-400 mt-2">
-                  {certificates.filter(cert => cert.company === company).length} certificate{certificates.filter(cert => cert.company === company).length > 1 ? 's' : ''} 🎯
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
