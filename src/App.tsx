@@ -23,8 +23,8 @@ function App() {
     { id: 'about', label: 'About' },
     { id: 'education', label: 'Education' },
     { id: 'certifications', label: 'Certifications' },
-    { id: 'training', label: 'Training' },
     { id: 'experience', label: 'Experience' },
+    { id: 'training', label: 'Training' },
     { id: 'skills', label: 'Skills' },
     { id: 'skills-graph', label: 'Skills Graph' },
     { id: 'projects', label: 'Projects' },
@@ -139,8 +139,8 @@ function App() {
         <About />
         <Education />
         <Certifications />
-        <OnlineTraining />
         <Experience />
+        <OnlineTraining />
         <Skills />
         <SkillsGraph />
         <Projects />
