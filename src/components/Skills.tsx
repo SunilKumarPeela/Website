@@ -1,4 +1,3 @@
-<parameter name="filePath">src/components/Skills.tsx</parameter>
 import React, { useState } from 'react';
 import { Shield, Server, Code, Eye, Lock, Globe, Cpu, Cloud, Database, Network, Zap, Settings, CheckCircle, Wifi, HardDrive, Terminal, Key, FileText, Activity, Layers, GitBranch, Braces, Monitor, Target, Search } from 'lucide-react';
 
@@ -272,4 +271,3 @@ const Skills = () => {
 };
 
 export default Skills;
-</parameter>
