@@ -39,17 +39,16 @@ const Hero = () => {
           {/* Left Column - Text Content */}
           <div className="text-center lg:text-left">
             <div className="mb-8">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-cyan-300 mb-4">
+              {/* Name first */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent leading-tight mb-4">
+                Sunil Kumar Peela
+              </h1>
+              
+              {/* Title under name */}
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-cyan-300 mb-2">
                 Cyber Security Analyst
               </h2>
               
-              {/* Name moved down and sized to fit one line */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent leading-tight">
-                Sunil Kumar Peela
-              </h1>
-            </div>
-            
-            <div className="mb-6">
               <p className="text-lg md:text-xl text-gray-300">
                 8+ Years of Experience in Cybersecurity
               </p>
