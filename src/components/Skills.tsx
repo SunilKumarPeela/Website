@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Server, Code, Eye, Lock, Globe, Cpu, Cloud, Database, Network, Zap, Settings, CheckCircle, Wifi, HardDrive, Terminal, Key, FileText, Activity, Layers, GitBranch, Braces, Monitor, Target, Search } from 'lucide-react';
+import { Shield, Server, Code, Eye, Lock, Globe, Cpu, Cloud, Database, Network, Zap, Settings, CheckCircle, Wifi, HardDrive, Terminal, Key, FileText, Activity, Layers, GitBranch, Braces, Monitor, Target, Search, Clock } from 'lucide-react';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState(0);
