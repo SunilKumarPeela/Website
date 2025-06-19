@@ -77,11 +77,9 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-900/95 backdrop-blur-sm border-b border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo/Brand - Single Line Name */}
+            {/* Empty space for logo/brand - removed name */}
             <div className="flex items-center">
-              <span className="text-white font-bold text-lg sm:text-xl lg:text-2xl whitespace-nowrap">
-                Sunil Kumar Peela
-              </span>
+              {/* Intentionally empty - no name displayed */}
             </div>
 
             {/* Desktop Navigation */}
