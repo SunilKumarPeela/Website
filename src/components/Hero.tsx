@@ -50,9 +50,9 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Name - Moved below and kept on single line */}
-            <div className="mb-6 lg:mb-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent leading-tight mb-4 lg:mb-6 whitespace-nowrap overflow-hidden">
+            {/* Name - Fixed sizing and overflow */}
+            <div className="mb-6 lg:mb-8 w-full">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent leading-tight mb-4 lg:mb-6 break-words">
                 Sunil Kumar Peela
               </h1>
               
