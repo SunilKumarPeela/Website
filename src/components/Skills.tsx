@@ -102,12 +102,7 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="flex justify-center mb-4">
-            <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-500/30">
-              <Cpu className="h-12 w-12 text-cyan-400" />
-            </div>
-          </div>
-          <h2 className="text-4xl font-bold text-white mb-4">Technical Skills</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Skills</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive cybersecurity expertise across multiple domains and technologies
           </p>
