@@ -163,7 +163,10 @@ const Skills = () => {
                         }}
                       />
                       <div className={`w-full h-full bg-gradient-to-r ${skillCategories[activeCategory].color} rounded flex items-center justify-center`} style={{ display: 'none' }}>
-                        <skillCategories[activeCategory].icon className="h-6 w-6 text-white" />
+                        {(() => {
+                          const FallbackIcon = skillCategories[activeCategory].icon;
+                          return <FallbackIcon className="h-6 w-6 text-white" />;
+                        })()}
                       </div>
                     </div>
                   </div>
