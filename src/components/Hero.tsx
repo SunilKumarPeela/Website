@@ -24,7 +24,7 @@ const Hero = () => {
 
   const handleResumeDownload = () => {
     // Open Google Drive link in new tab
-    window.open('https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png', '_blank');
+    window.open('https://drive.google.com/file/d/1l_UUleYsdXM9IlytpKy0Q_Pyf8ZDLanY/view?usp=sharing', '_blank');
   };
 
   return (
@@ -173,7 +173,7 @@ const Hero = () => {
               {/* Professional headshot */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-cyan-400/50 shadow-2xl shadow-cyan-500/25">
                 <img
-                  src="https://media.licdn.com/dms/image/v2/D4D35AQEp-5jBWYKafg/profile-framedphoto-shrink_400_400/B4DZblAMPMGYAg-/0/1747598755113?e=1750856400&v=beta&t=WY3bEwZX3T5CHmYJ7vFGDjR1hDUxo35BBc3Lxt-L2cE"
+                  src="https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png"
                   alt="Sunil Kumar Peela - Cybersecurity Professional"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => {
