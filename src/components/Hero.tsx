@@ -173,7 +173,7 @@ const Hero = () => {
               {/* Professional headshot */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-cyan-400/50 shadow-2xl shadow-cyan-500/25">
                 <img
-                  src="https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png"
+                  src="https://media.licdn.com/dms/image/v2/D4D35AQEp-5jBWYKafg/profile-framedphoto-shrink_400_400/B4DZblAMPMGYAg-/0/1747598755113?e=1751641200&v=beta&t=zsqCMDh2TqKr4glg1JHdw5MV_xUtPUyR-bWEwHIibfQ"
                   alt="Sunil Kumar Peela - Cybersecurity Professional"
                   className="w-full h-full object-cover object-center"
                   onError={(e) => {
