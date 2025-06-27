@@ -24,7 +24,7 @@ const Hero = () => {
 
   const handleResumeDownload = () => {
     // Open Google Drive link in new tab
-    window.open('https://drive.google.com/file/d/1l_UUleYsdXM9IlytpKy0Q_Pyf8ZDLanY/view?usp=sharing', '_blank');
+    window.open('https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png', '_blank');
   };
 
   return (
